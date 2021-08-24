@@ -20,7 +20,7 @@ const Typography = (props) => {
 
 Typography.defaultProps = {
     type: 'body',
-    color: '#cccccc'
+    color: '#a3a3a3'
 };
 
 Typography.propTypes = {

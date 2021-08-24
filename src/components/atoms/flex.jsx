@@ -1,21 +1,31 @@
-import React from 'react';
+import React from "react";
 
-const style = {
-    display: 'flex'
+const centerFlexStyle = {
+  display: "flex",
+  alignItems: "center",
 };
 
 const Flex = (props) => {
-    const { children } = props;
-    return <div style={{...style}}>
-            {children}
+  const { children } = props;
+  return <div style={{ ...centerFlexStyle }}>{children}</div>;
+};
+
+const SpaceArround = (props) => {
+  const { children } = props;
+  return (
+    <div style={{ ...centerFlexStyle, justifyContent: "space-around" }}>
+      {children}
     </div>
+  );
 };
 
 const SpaceBetween = (props) => {
-    const { children } = props;
-    return <div style={{...style, justifyContent: 'space-between'}}>
-        {children}
+  const { children } = props;
+  return (
+    <div style={{ ...centerFlexStyle, justifyContent: "space-between" }}>
+      {children}
     </div>
-}
+  );
+};
 
-export {Flex, SpaceBetween};
+export { Flex, SpaceArround, SpaceBetween };
